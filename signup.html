@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <!-- Title Page-->
+    <title>SignUp</title>
+    <!-- Icons font CSS-->
+    <link href="signup_/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all"/>
+    <link href="signup_/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all"/>
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"/>
+    <!-- Vendor CSS-->
+    <link href="signup_/vendor/select2/select2.min.css" rel="stylesheet" media="all"/>
+    <!-- Main CSS-->
+    <link href="signup_/css/main1.css" rel="stylesheet" media="all"/>
+    <script type="text/javascript">
+            function check()
+{
+
+  if (document.getElementById("dropdown").value == "")
+  {
+      alert("Plese Enter Your Company Name");
+      return false;
+  }
+  if (document.getElementById("cemail").value == "")
+  {
+    alert("Plese Enter your Email Address");
+	return false;
+  }
+  if (document.getElementById("pass1").value == "")
+  {
+    alert("Plese Enter Your Password");
+	return false;
+  } 
+  if (document.getElementById("pass2").value == "")
+  {
+    alert("Plese Enter Confirm Password");
+	return false;
+  }
+  if (document.getElementById("pass1").value != document.getElementById("pass2").value)
+  {
+    alert("Confirm Password does not match.");
+	return false;
+  }
+  
+  return true;
+  }
+  
+</script>
+</head>
+<body>
+    <form id="form1" runat="server" onsubmit="return check()">
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div style="background-image:url(signup_/img/1254.jpg);background-size:cover;display:table-cell;width:60%;background-repeat:no-repeat;background-position:center;"></div>
+                <div class="card-body">
+                    <h2 class="title">Registration Info</h2>
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="cname" runat="server" id="dropdown">
+                                    <option disabled="disabled" selected="selected" value="">Select Company</option>
+                                    <option value="JUSCO">Jamshedpur Utilities & Services Company Limited (JUSCO)</option>
+                                    <option value="BPPL">Bhubaneshwar Power Private Limited</option>
+                                    <option value="TSAL">Tata Steel Alloys Limited</option>
+                                    <option value="TPL">Tata Pigments Limited</option>
+                                    <option value="TSPDL">Tata Steel Processing and Distribution Limited (TSPDL)</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="email" placeholder="Email" name="cemail" runat="server" id="cemail"/>
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="password" placeholder="Password" name="pass1" runat="server" id="pass1"/>
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="password" placeholder="Confirm Password" name="pass2" runat="server" id="pass2"/>
+                        </div>
+                    <p><asp:Label ID="Label1" runat="server" Text=""></asp:Label></p>
+                        <div class="p-t-10">
+                            <button class="btn btn--pill btn--green" type="submit" onserverclick="submit" runat="server" onclick="window.location.href='login.html'">Submit</button>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button class="btn btn--pill btn--green" type="reset" value="Reset">Reset</button><br />
+                            <a href="login.html" style="font-size:15px; color:#000000">Already Created ?</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center;margin-top:10px;">This is a demo page.</p>
+    </div>
+    <!-- Jquery JS-->
+    <script src="signup_/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="signup_/vendor/select2/select2.min.js"></script>
+    <!-- Main JS-->
+    <script src="signup_/js/global.js"></script>
+    </form>
+</body>
+</html>

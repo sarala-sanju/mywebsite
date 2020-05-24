@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<style>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body
+{
+  margin: 0px;
+}
+.main-container{
+  text-align: center;
+  background: #eee;
+}
+.heading{
+  padding-top: 40px;
+  color: #444;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #884909;
+  width: 280px;
+  margin: auto;
+  line-height: 80px;
+
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.row
+{
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #008000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  margin: 0px 5px;
+  text-decoration:none;
+}
+
+.button:hover {
+  background-color: #555;
+}
+#mySearch {
+  width: 300%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+img
+{
+  width: 100%;
+  height: 340px;
+  border-radius: 10px 10px 0px 0px;
+}
+      .menu-bar{
+        background: #000000;
+        width: 93.4%;
+        height: 60px;
+        float:right;
+        text-align: center;
+      
+      }
+      .menu-bar ul
+      {
+        display: inline-flex;
+        list-style: none;
+        color:#ffffff;
+        padding: 0px;
+        width: 80%;
+        margin: 0px;
+        height: 100%;
+
+      }
+      .menu-bar ul li
+      {
+        width: 50%;
+        padding: 10px;
+
+      }
+      .menu-bar ul li a
+      {
+        text-decoration: none;
+        color: #ffffff;
+        font-family: fantasy;
+        font-size:30px;
+
+      }
+      .menu-bar ul li:hover
+      {
+        background: #dddddd;
+        color: red;
+      }
+      .menu-bar .fa
+      {
+        margin-right: 8px;
+      }
+      .sub-menu-1 
+      {
+        display: none;
+        width: 20%;      }
+    
+      .menu-bar ul li:hover .sub-menu-1 ul 
+      {
+        display: inline-block;
+        margin: 10px;
+      }
+    
+      .menu-bar ul li:hover .sub-menu-1
+      {
+        display: block;
+        position: absolute;
+        background-color: #000000;
+        margin-top: 15px;
+
+      }
+      .menu-bar ul li:hover .sub-menu-1 ul 
+      {
+        display: block;
+        margin: 5px;
+      }
+      .menu-bar ul li:hover .sub-menu-1 ul li
+      {
+        width: 100%;
+        padding: 10px;
+
+
+      }
+      .fa-angle-down
+      {
+        margin-left:10px;
+      }
+      .menu-bar ul li.active
+      {
+        background-color: #008000;
+      }
+</style>
+</head>
+<body>
+<div class="main-container" runat="server">
+    <img src="https://www.bhubaneshwarpower.com/img/core-img/logo.png" runat="server" id="logo" style="height:60px;width:100px;float:left;background-color:#ffffff;" />
+  <div class="menu-bar">  
+  <ul>
+    <li class="active"><a href="123.html" style="width: 80%;"><i class="fa fa-clone"></i>Services<i class="fa fa-angle-down"></i></a>
+       </li>
+    <li ><a href="#"><i class="fa fa-home"></i>Company<i class="fa fa-angle-down"></i></a>
+    <div class="sub-menu-1">
+      <ul>
+        <li><a runat="server" id="wedsitename" target="_blank" href="https://bhubaneshwarpower.com/">My organization</a></li>
+        <li><a href="#" runat="server">My billing dashboard</a></li>
+        <li><a href="home.html" runat="server" >Sign out</a></li>  
+      </ul> 
+      </div>
+    </li>
+    <li><a href="#"><i class="fa fa-phone"></i>Support<i class="fa fa-angle-down"></i></a>
+    <div class="sub-menu-1">
+      <ul>
+        <li><a href="about_us.html">Our Team</a></li>
+        <li><a href="contact_us.html">Contact Us</a></li>
+      </ul> 
+      </div></li>
+  </ul>
+  </div>
+  <div class="heading"> 
+  <h1 style="font-family:fantasy;">Service</h1>
+    </div>
+    <br/>
+    <div style="display: inline-flex;width:80%;">
+  <input style="float: left;" type="text" id="mySearch" onkeyup="myFunction()" placeholder="Find a Service by Name(for Example:  Travel, Canteen )" title="Type in a category"/><button style="width:20%;"><i class="fa fa-search" style="font-size:25px;opacity:0.6;"></i></button>
+  <a href="activeservices.html" class="button" style="margin-left: 150px;text-decoration:none;">View Active Services</a>
+</div>
+<br/>
+<br />
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="image\111.jpg" alt="Canteen" class="img"/>
+      <div class="container">
+        <h2>Canteen</h2>
+       
+        <p><a id="cmsbtn" runat="server" type="button" href="#" style="text-decoration:none;" class="button" onclick="bill()">Canteen Management Center</a></p>
+        <p><a class="button" onclick="bill()">Canteen Feedback System</a></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+      <img src="image\118.png" alt="Travel" class="img"/>
+      <div class="container">
+        <h2>Travel</h2>
+       
+        <p><a id="dtsbtn" runat="server" type="button" href="#" style="text-decoration:none;" class="button" onclick="bill()">Domestic Travel System</a></p>
+        <p><a class="button" onclick="bill()">Foreign Travel System</a></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+      <img src="image\113.jpg" alt="E-learning" class="img"/>
+      <div class="container">
+        <h2>E-Learning</h2>
+        
+        <p><a class="button" onclick="bill()">M.S.Excel</a></p>
+         <p><a class="button" onclick="bill()">M.S.Office</a></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+      <img src="image\115.jpg" alt="Hospital" class="img"/>
+      <div class="container">
+        <h2>Hospital</h2>
+      
+        <p><a class="button" onclick="bill()">Book Appointment</a></p>
+         <p><a class="button" onclick="bill()">View Report </a></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+      <img src="image\117.jpg" alt="Sports" class="img"/>
+      <div class="container">
+        <h2>Sports</h2>
+        
+        <p><a class="button" onclick="bill()">Get Membership</a></p>
+         <p><a class="button" onclick="bill()">View Schedule</a></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+  <p style="text-align: center;">This is a demo page.</p>
+</div>
+
+<script>
+
+    // JavaScript code 
+    function myFunction() {
+        let input = document.getElementById('mySearch').value
+        input = input.toLowerCase();
+        let x = document.getElementsByClassName('column');
+
+        for (i = 0; i < x.length; i++) {
+            if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                x[i].style.display = "none";
+            }
+            else {
+                x[i].style.display = "inline-table";
+            }
+        }
+    }
+
+</script>
+<script type="text/javascript">
+  function bill()
+  {
+    alert("Thank you for buying.");
+  }
+</script>
+</body>
+</html>

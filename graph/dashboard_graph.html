@@ -1,0 +1,302 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Dashboard</title>
+	<script src="Chart.min.js"></script>
+	<script src="utils.js"></script>
+	<style>
+		canvas {
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+		}
+		.chart-container {
+		}
+		.container {
+			height:700px;
+			width:1500px;
+			/*justify-content: center;*/
+		}
+	</style>
+
+</head>
+
+<body>
+<div style="border-spacing:2px;display: inline-flex;width:1000px;height:200px;">
+	<canvas style="box-shadow: 0 2px 12px rgba(32,32,32,.3); padding:10px; border-radius:10px;margin:10px;" id="chart-legend-top"></canvas>
+	<div><canvas style="box-shadow: 0 2px 12px rgba(32,32,32,.3);padding:10px;border-radius:10px;width:420px;height:430px;margin:10px;margin-left:5px;" id="chart-area"></canvas></div>
+</div>
+<div style="border-spacing:2px;display: inline-flex;width:1000px;height:200px;margin:10px;">
+	<canvas style="box-shadow: 0 2px 12px rgba(32,32,32,.3);padding:10px;border-radius:10px;margin: 10px;" id="chart-legend-right"></canvas>
+	<div><canvas style="box-shadow: 0 2px 12px rgba(32,32,32,.3);padding:10px;border-radius:10px;width:420px;height:430px;margin:10px;margin-left:5px;" id="donutchart-area"></canvas></div>
+</div>
+	<script>
+		var color = Chart.helpers.color;
+		function createConfig(legendPosition,charttype,chartdata,charttitle) {
+			return {
+				type:[charttype],
+				data:chartdata,
+				options: {
+					responsive: true,
+					legend: {
+						position: legendPosition,
+					},
+					scales: {
+						xAxes: [{
+							display: true,
+							scaleLabel: {
+								display: false,
+								labelString: 'Companies'
+							}
+						}],
+						yAxes: [{
+							display: true,
+							scaleLabel: {
+								display: false,
+								labelString: 'Percentage'
+							}
+						}]
+					},
+					title: charttitle,
+				}
+			};
+		}
+
+		function bargraph() {
+			[{
+				type: 'bar',
+				id: 'chart-legend-top',
+				legendPosition: 'top',
+				title: {
+				    display: true,
+				    text: 'Turnover/Net Worth(Crore) by Company Name'
+				},
+				data: {
+					labels: [
+					'Tata Steel Processing and Distribution Limited (TSPDL)',
+					'Tinplate Company of India Limited',
+					'Tata Metaliks Limited',
+					'Jamshedpur Utilities & Services Company Limited (JUSCO)',
+					'Tata Sponge Iron Limited',
+					'Bhubaneshwar Power Private Limited',
+					'Tata BlueScope Steel Limited',
+					'Jamshedpur Continuous Annealing and Processing Co Pvt Ltd',
+					'The Indian Steel & Wire Limited',
+					'TM International Logistics Limited',
+					'Tata Steel Alloys Limited ',
+					'mjunction Services Limited',
+					'Tata Pigments Limited',
+					'Jamshedpur Football and Sporting Private Limited',
+					'Tata Steel Foundation',
+					'JAMIPOL Limited',
+					'TKM  Global Logistics Ltd.',
+					'Kalzip Indian Private Ltd.',
+					'Naba Diganta Water Management Limited',
+					'Adityapur Toll Bridge Company Limited',
+					'Tata NYK Shipping Private Limited',
+					'Sez Adityapur Ltd.',
+					'Tayo Rolls Limited',
+					'S & T Mining Company Private Limited',
+					'Tata Steel Special Economic Zone Ltd. ',
+					'TM Mining Company Ltd.'],
+					datasets: [{
+						label: 'Turnover(Crore)',
+						data: [4280.92,
+								2611.1,
+								2155.11,
+								1114.13,
+								992.05,
+								540.63,
+								400.52,
+								371.37,
+								288.64,
+								198.72,
+								174.96,
+								139.62,
+								115.7,
+								46.52,
+								43.66,
+								42.734,
+								27.72,
+								24.07,
+								16.89,
+								7.87,
+								1.74,
+								0.04,
+								0,
+								-4.61],
+						backgroundColor: color(window.chartColors.blue).alpha(0.8).rgbString(),
+						borderColor: window.chartColors.blue,
+						borderWidth: 1
+					}]
+				}
+			}, {
+				type: 'bar',
+				id: 'chart-legend-right',
+				legendPosition: 'top',
+				title: {
+				    display: true,
+				    text: 'Holding % by Company Name'
+				},
+				data: {
+					labels: ['Tata Steel Processing and Distribution Limited (TSPDL)',
+							'Jamshedpur Utilities & Services Company Limited (JUSCO)',
+							'Bhubaneshwar Power Private Limited',
+							'Tata Steel Alloys Limited ',
+							'Tata Pigments Limited',
+							'Jamshedpur Football and Sporting Private Limited',
+							'Tata Steel Foundation',
+							'TKM  Global Logistics Ltd.',
+							'Tata Steel Special Economic Zone Ltd. ',
+							'The Indian Steel & Wire Limited',
+							'Adityapur Toll Bridge Company Limited',
+							'Tinplate Company of India Limited',
+							'Naba Diganta Water Management Limited',
+							'TM Mining Company Ltd.',
+							'Tayo Rolls Limited',
+							'Tata Sponge Iron Limited',
+							'Jamshedpur Continuous Annealing and Processing Co Pvt Ltd',
+							'TM International Logistics Limited',
+							'Sez Adityapur Ltd.',
+							'Tata Metaliks Limited',
+							'Tata BlueScope Steel Limited',
+							'mjunction Services Limited',
+							'Tata NYK Shipping Private Limited',
+							'S & T Mining Company Private Limited',
+							'JAMIPOL Limited',
+							'Kalzip Indian Private Ltd.'],
+						datasets: [{
+						label: 'Holding %',
+						data: [100,
+								100,
+								100,
+								100,
+								100,
+								100,
+								100,
+								100,
+								100,
+								95.01,
+								88.5,
+								74.96,
+								74,
+								74,
+								54.91,
+								54.5,
+								51,
+								51,
+								51,
+								50.09,
+								50,
+								50,
+								50,
+								50,
+								39.78],
+						backgroundColor: color(window.chartColors.red).alpha(0.8).rgbString(),
+						borderColor: window.chartColors.red,
+						borderWidth: 1
+					}]
+				}
+			}].forEach(function(details) {
+				var ctx = document.getElementById(details.id).getContext('2d');
+				var config = createConfig(details.legendPosition,details.type,details.data,details.title);
+				new Chart(ctx, config);
+			});
+		};
+
+		var randomScalingFactor = function() {
+			return Math.round(Math.random() * 100);
+		};
+
+		var config = {
+			type: 'pie',
+			data: {
+				datasets: [{
+					data: [
+						11,
+						8,
+						4,
+						2,
+						1,
+					],
+					backgroundColor: [
+						"#3cfa07",
+                        "#41db16",
+                        "#41ba20",
+                        "#3e9925",
+                        "#398025"
+					],
+					label: 'Dataset 1'
+				}],
+				labels: [
+					'Jharkhand',
+					'West Bengal',
+					'Odisha',
+					'Maharashtra',
+					'Haryana'
+				]
+			},
+			options: {
+				responsive: true,
+				title: {
+					display:true,
+					fontSize:20,
+					text: 'Location'
+				}
+			}
+		};
+
+		var configdonut = {
+			type: 'doughnut',
+			data: {
+				datasets: [{
+					data: [
+						16,
+						8,
+						1
+					],
+					backgroundColor: [
+						'#05fcec',
+                        '#1adbce',
+                        '#22b0c9',
+					],
+					label: 'Dataset 1'
+				}],
+				labels: [
+					'Subsidiary',
+					'Joint Venture',
+					'Associate'
+				]
+			},
+			options: {
+				responsive: true,
+				title: {
+					display:true,
+					fontSize:20,
+					text: 'Holding Type'
+				}
+			}
+		};
+
+		function piechart() {
+			var ctx = document.getElementById('chart-area').getContext('2d');
+			window.myPie = new Chart(ctx, config);
+		};
+
+		function donutchart() {
+			var ctxnew = document.getElementById('donutchart-area').getContext('2d');
+			window.mydonut =new Chart(ctxnew,configdonut);
+		}
+
+		window.onload = start();
+		function start()
+		{
+			bargraph();
+			piechart();
+			donutchart();
+		}
+
+	</script>
+</body>
+</html>

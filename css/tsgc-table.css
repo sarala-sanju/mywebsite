@@ -1,0 +1,39 @@
+	*{
+			margin: 0;
+			padding: 0;
+
+		}
+
+		table{
+			position: relative;
+			z-index:2;
+			top: 100%;
+			margin: 2%;
+			width: 95%;
+			border-collapse: collapse;
+			border-spacing: 0;
+			border-radius: 12px 12px 0 0;
+			overflow: hidden;
+			box-shadow: 0 2px 12px rgba(32,32,32,.3);
+			background: #fafafa;
+			text-align: center;
+		}
+		table, th, td {
+  border: 1px solid orange ;
+  border-width: thin medium thick;
+  padding-top: 
+}
+		th,td{
+			padding: 10px 15px;
+		}
+		th{
+			background: #FF1493;
+			color: #fafafa;
+			text-transform: uppercase;
+			font-family: sans-serif;
+		}
+		tr:nth-child(odd){
+			background-color:#FFC0CB;
+
+
+		}

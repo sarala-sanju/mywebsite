@@ -1,0 +1,157 @@
+<html>
+<body>
+<script type="text/javascript" src="loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Tata Steel Subsidiary Companies",                                                      "Holding %"],
+        ["Jamshedpur Utilities & Services Company Limited (JUSCO)",                                 100],
+        ["Tata Pigments Limited",                                                                    100],
+        ["Tata Steel Alloys Limited",                                                                100],
+        ["Tata Steel Processing and Distribution Limited (TSPDL)",                                   100],
+        ["Adityapur Toll Bridge Company Limited",                                                    88.5],
+        ["Tinplate Company of India Limited",                                                        74.96],
+        ["Tayo Rolls Limited",                                                                       54.91],
+        ["Tata Sponge Iron Limited",                                                                  54.5],
+        ["Jamshedpur Continuous Annealing and Processing Co Pvt Ltd",                                 51],
+        ["The Indian Steel & Wire Limited",                                                           95.01],
+        ["TM International Logistics Limited",                                                        51],
+        ["Tata Metaliks Limited",                                                                     50.9],
+        ["mjunction Services Limited",                                                                50],
+        ["S & T Mining Company Private Limited",                                                      50],
+        ["Tata BlueScope Steel Limited",                                                              50],
+        ["Tata NYK Shipping Private Limited",                                                         50],
+        ["JAMIPOL Limited",                                                                           39.78],
+        ["Bhubaneshwar Power Private Limited",                                                        100],
+        ["Jamshedpur Football and Sporting Private Limited",                                          100],
+        ["Tata Steel Foundation",                                                                     100],
+        ["TKM  Global Logistics Ltd.",                                                                100],
+        ["Naba Diganta Water Management Limited",                                                      74],
+        ["Tata Steel Special Economic Zone Ltd.",                                                     100],
+        ["TM Mining Company Ltd.",                                                                     74],
+        ["Sez Adityapur Ltd.",                                                                         51]
+
+        ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1, { calc: "stringify", sourceColumn: 1,type: "string",role:"annotation"}]);
+
+      var options = {
+        title: "Holding % of Tata Steel Group Companies",
+        width: 1200,
+        height : 420,
+        bar: {groupWidth: "60%"} ,
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+      chart.draw(view, options);
+  }
+</script>
+
+  <script type="text/javascript">
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Tata Steel Subsidiary Companies",                                                      "Turnover/Net Worth"],
+        ["Jamshedpur Utilities & Services Company Limited (JUSCO)",                                 1114.13],
+        ["Tata Pigments Limited",                                                                    115.7],
+        ["Tata Steel Alloys Limited",                                                                174.96],
+        ["Tata Steel Processing and Distribution Limited (TSPDL)",                                   4280.92],
+        ["Adityapur Toll Bridge Company Limited",                                                    7.87],
+        ["Tinplate Company of India Limited",                                                        2611.1],
+        ["Tayo Rolls Limited",                                                                       0],
+        ["Tata Sponge Iron Limited",                                                                  992.05],
+        ["Jamshedpur Continuous Annealing and Processing Co Pvt Ltd",                                 371.37],
+        ["The Indian Steel & Wire Limited",                                                           288.64],
+        ["TM International Logistics Limited",                                                        198.72],
+        ["Tata Metaliks Limited",                                                                     2155.11],
+        ["mjunction Services Limited",                                                                139.62],
+        ["S & T Mining Company Private Limited",                                                      -4.61],
+        ["Tata BlueScope Steel Limited",                                                              400.52],
+        ["Tata NYK Shipping Private Limited",                                                         1.74],
+        ["JAMIPOL Limited",                                                                           42.734],
+        ["Bhubaneshwar Power Private Limited",                                                        540.63],
+        ["Jamshedpur Football and Sporting Private Limited",                                          46.52],
+        ["Tata Steel Foundation",                                                                     43.66],
+        ["TKM  Global Logistics Ltd.",                                                                27.72],
+        ["Kalzip Indian Private Ltd.",                                                                24.07],
+        ["Naba Diganta Water Management Limited",                                                      16.89],
+        ["Sez Adityapur Ltd.",                                                                         0.04]
+
+        ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1, { calc: "stringify", sourceColumn: 1,type: "string",role:"annotation"}]);
+
+      var options = {
+        title: "Turnover/Net Worth",
+        width: 1200,
+        height : 420,
+        bar: {groupWidth: "50%"} ,
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values1"));
+      chart.draw(view, options);
+  }
+
+
+
+  </script>
+      <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Holding type',  'Holdings'],
+          ['Subsidiary',    16],
+          ['Joint Venture', 8],
+          ['Associate',   1]
+        ]);
+
+        var options = { title: 'Holding Types', hAxis: {title: 'Holding type',  titleTextStyle: {color: '#333'}}, vAxis: {minValue: 0}};
+
+        var chart2 = new google.visualization.PieChart(document.getElementById('PieChart'));
+        chart2.draw(data,options);
+      }
+    </script>
+
+      </script>
+      <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+        ['Location',                               'State'],
+        ['Haryana ',                                1],
+        ['Jharkhand',                               11],
+        ['Maharashtra',                             2],
+        ['Odisha',                                  4],
+        ['West Bengal',                             8]
+        ]);
+
+        var options = { title: 'Location',
+         hAxis: {title: 'Holding type',  titleTextStyle: {color: '#333'}}, 
+         vAxis: {minValue: 0}, 
+         pieHole:0.4,
+       };
+
+        var chart2 = new google.visualization.PieChart(document.getElementById('DonutChart'));
+        chart2.draw(data,options);
+      }
+    </script>
+
+    <div id="columnchart_values1" style="width: 1200px; height: 420px;"></div>
+    <div id="columnchart_values" style="width: 1200px; height: 420px;"></div>
+    <br>
+    <div id="PieChart" style="width: 370px; height: 200px;"></div>
+    <div id="DonutChart" style="width: 370px; height: 200px;"></div>
+ 
+</body>
+</html>

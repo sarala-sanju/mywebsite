@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Home</title>
+    <style type="text/css">
+	body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav .ac {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.topnav .ac:hover {
+  background-color:#0c7ebc;
+  color: black;
+}
+
+.topnav .ac.active {
+  background-color: #0c7ebc;
+  color: white;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  background-image:url("./image/tata3.jpg");
+  height: 50%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+        .h1 {
+            color: #ffffff;
+            text-align: center;
+            padding-top: 178px;
+            padding-bottom: 148px;
+            text-shadow: 20px;
+        }
+
+        .lnkbtn {
+          background-color: #4CAF50;
+          border: none;
+          color: white;
+          padding:10px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin:10px;
+          cursor: pointer;
+
+}
+
+</style>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/tsgc-table.css"/>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="topnav">
+	<a href="home.html"><img src="http://pluspng.com/img-png/tata-png-file-tata-logo-svg-1116.png" style="height:65px; float:left;margin-right:5px"/></a>
+	<a class="fas fa-home active ac" href="home.html" style="height: 37px;width: 37px; font-size:34px; float:left;margin-right:5px"></a>
+    <a class="ac" href="graph/dashboard_graph.html" style="float:left;height:37px;">Dashboard</a>
+	<a class="ac" href="signup.html" style="float:right;height: 37px;">SignUp</a>
+	<a class="ac" href="login.html" style="float:right;height: 37px;">Login</a>
+</div>
+<div class="bg">
+<h1 class="h1">Tata Steel Group Companies</h1>
+</div>
+<table>
+<tr><th>Name of the Company</th><th>Holding Type</th><th>Holding(%)</th><th>Turnover(Crore)</th><th>Location</th><th>State</th><th>CEO/Managing Director</th><th>website</th></tr>
+<tr><td>Jamshedpur Utilities & Services Company Limited (JUSCO)</td><td>Subsidiary</td><td>100</td><td>1114.13</td><td>Jamshedpur</td><td>Jharkhand</td><td>Tarun Daga</td><td><a href="https://www.juscoltd.com/">Click to view Website</a></td></tr>
+<tr><td>Tata Pigments Limited</td><td>Subsidiary</td><td>100</td><td>115.7</td><td>Jamshedpur</td><td>Jharkhand</td><td>Shubhenjit Chaudhuri</td><td><a href="https://tatapigments.co.in/">Click to view Website</a></td></tr>
+<tr><td>Tata Steel Alloys Limited </td><td>Subsidiary</td><td>100</td><td>174.96</td><td>Cuttack </td><td>Odisha</td><td>Bibhudutta Nanda</td><td><a href="http://www.tsalloys.com/">Click to view Website</a></td></tr>
+<tr><td>Tata Steel Processing and Distribution Limited (TSPDL)</td><td>Subsidiary</td><td>100</td><td>4280.92</td><td>Jamshedpur</td><td>Jharkhand</td><td>Abraham Stephenson</td><td><a href="https://www.tsdpl.in/">Click to view Website</a></td></tr>
+<tr><td>Adityapur Toll Bridge Company Limited</td><td>Subsidiary</td><td>88.5</td><td>7.87</td><td>Jamshedpur</td><td>Jharkhand</td><td>Ritu Raj Sinha</td><td>--</td></tr>
+<tr><td>Tinplate Company of India Limited</td><td>Subsidiary</td><td>74.96</td><td>2611.1</td><td>Jamshedpur</td><td>Jharkhand</td><td>R N Murthy</td><td><a href="http://www.tatatinplate.com/">Click to view Website</a></td></tr>
+<tr><td>Tayo Rolls Limited</td><td>Subsidiary</td><td>54.91</td><td>0</td><td>Jamshedpur</td><td>Jharkhand</td><td>Anand Sen</td><td>--</td></tr>
+<tr><td>Tata Sponge Iron Limited</td><td>Subsidiary</td><td>54.5</td><td>992.05</td><td>Keojhar</td><td>Odisha</td><td>Sanjay Pattanaik</td><td>--</td></tr>
+<tr><td>Jamshedpur Continuous Annealing and Processing Co Pvt Ltd</td><td>Subsidiary</td><td>51</td><td>371.37</td><td>Jamshedpur</td><td>Jharkhand</td><td>Chavaly Venkat Shastry</td><td>--</td></tr>
+<tr><td>The Indian Steel & Wire Limited</td><td>Subsidiary</td><td>95.01</td><td>288.64</td><td>Jamshedpur</td><td>Jharkhand</td><td>Neeraj Kant</td><td><a href="http://iswp.co.in/">Click to view Website</a></td></tr>
+<tr><td>TM International Logistics Limited</td><td>subsiduary</td><td>51</td><td>198.72</td><td>Kolkata</td><td>West Bengal</td><td>Ashish Kr Gupta</td><td><a href="http://www.tmilltd.com/">Click to view Website</a></td></tr>
+<tr><td>Tata Metaliks Limited</td><td>subsiduary</td><td>50.09</td><td>2155.11</td><td>Kolkata</td><td>West Bengal</td><td>Sandeep Kumar</td><td><a href="https://www.tatametaliks.com/">Click to view Website</a></td></tr>
+<tr><td>mjunction Services Limited</td><td>Joint Venture</td><td>50</td><td>139.62</td><td>Kolkata</td><td>West Bengal</td><td>Vinaya Verma</td><td><a href="https://www.mjunction.in/">Click to view Website</a></td></tr>
+<tr><td>S & T Mining Company Private Limited</td><td>Joint Venture</td><td>50</td><td>-4.61</td><td>Kolkata</td><td>West Bengal</td><td>Harsh Sachdev</td><td><a href="http://www.stmining.com/">Click to view Website</a></td></tr>
+<tr><td>Tata BlueScope Steel Limited</td><td>Joint Venture</td><td>50</td><td>400.52</td><td>Jamshedpur</td><td>Jharkhand</td><td>Mark R. Vassella</td><td><a href="https://tatabluescopesteel.com/">Click to view Website</a></td></tr>
+<tr><td>Tata NYK Shipping Private Limited</td><td>Joint Venture</td><td>50</td><td>1.74</td><td>Kolkata</td><td>West Bengal</td><td>Amitabh Panda</td><td><a href="https://www.tatanykshipping.com/">Click to view Website</a></td></tr>
+<tr><td>JAMIPOL Limited</td><td>Associate</td><td>39.78</td><td>42.734</td><td>Jamshedpur</td><td>Jharkhand</td><td>Adarsh Kumar Agrawal</td><td><a href="http://www.jamipol.com/">Click to view Website</a></td></tr>
+<tr><td>Bhubaneshwar Power Private Limited</td><td>Subsidiary</td><td>100</td><td>540.63</td><td>Bhubaneswar </td><td>Odisha</td><td>Sharad Kumar</td><td><a href="https://bhubaneshwarpower.com/">Click to view Website</a></td></tr>
+<tr><td>Jamshedpur Football and Sporting Private Limited</td><td>subsiduary</td><td>100</td><td>46.52</td><td>Mumbai </td><td>Maharashtra</td><td>Mukul choudhary</td><td><a href="https://www.fcjamshedpur.com/">Click to view Website</a></td></tr>
+<tr><td>Tata Steel Foundation</td><td>subsiduary</td><td>100</td><td>43.66</td><td>Mumbai </td><td>Maharashtra</td><td>Kaushik Chatterjee</td><td>--</td></tr>
+<tr><td>TKM  Global Logistics Ltd.</td><td>Joint Venture</td><td>100</td><td>27.72</td><td>Kolkata</td><td>West Bengal</td><td>Anand Chand</td><td><a href="http://www.tkmglobal.com/">Click to view Website</a></td></tr>
+<tr><td>Kalzip Indian Private Ltd.</td><td>subsiduary</td><td>--</td><td>24.07</td><td>Gurgaon</td><td>Haryana</td><td>Suresh Pillai</td><td>--</td></tr>
+<tr><td>Naba Diganta Water Management Limited</td><td>Joint Venture</td><td>74</td><td>16.89</td><td>Kolkata</td><td>West Bengal</td><td>Amaresh Kr Das</td><td><a href="https://www.ndwml.com/">Click to view Website</a></td></tr>
+<tr><td>Tata Steel Special Economic Zone Ltd. </td><td>subsiduary</td><td>100</td><td>0.38</td><td>Bhubaneswar</td><td>Odisha </td><td>Ashish Mathur</td><td><a href="https://www.tatasteelsez.com/">Click to view Website</a></td></tr>
+<tr><td>TM Mining Company Ltd.</td><td>Joint Venture</td><td>74</td><td>--</td><td>Kolkata</td><td>West Bengal</td><td>Anju Gupta</td><td>--</td></tr>
+<tr><td>Sez Adityapur Ltd.</td><td>Joint Venture</td><td>51</td><td>0.04</td><td>Jamshedpur</td><td>Jharkhand</td><td>Tarun Daga</td><td><a href="http://www.gammoninfra.com/">Click to view Website</a></td></tr>
+
+
+</table>
+        <p style="text-align:center;"><a href="graph/dashboard_graph.html" class="lnkbtn">Click here to view in Dashboard</a></p>
+    </form>
+</body>
+</html>
